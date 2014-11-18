@@ -1,0 +1,74 @@
+"#header": {
+	layout: "vertical",
+	top: "0",
+	height: "25%",
+	width: Ti.UI.FILL
+},
+"#header_image": {
+	top: "20dp",
+	bottom: "20dp",
+	left: "10dp",
+	height: Ti.UI.FILL,
+	image: "/logo.png"
+},
+"#header_search": {
+	top: "10dp",
+	left: "10dp",
+	bottom: "10dp",
+	right: "10dp"
+},
+"#container": {
+	top: "0",
+	bottom: "0",
+	right: "0",
+	left: "0",
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	layout: "composite"
+},
+"#container_inner": {
+	layout: "vertical",
+	height: "320dp",
+	width: "300dp"
+},
+"#container_image": {
+	top: "10dp",
+	left: "10dp",
+	right: "10dp",
+	width: "268dp",
+	height: "268dp",
+	image: "/locate.png"
+},
+"#container_text": {
+	top: "10dp",
+	width: Ti.UI.FILL,
+	textAlign: "center",
+	left: "10dp",
+	right: "10dp",
+	textid: "index_findgasnearme",
+	color: "#123456",
+	font: { fontSize:'15px' }
+},
+"#footer": {
+	bottom: "0",
+	height: "25%",
+	width: Ti.UI.FILL
+},
+"#footer_inner": {
+	layout: "horizontal",
+	height: "100dp",
+	bottom: "20dp"
+},
+".footer_item": {
+	layout: "vertical",
+	width: "25%"
+},
+".footer_item_image": {
+	width: "100dp",
+	height: "60dp"
+},
+".footer_item_text": {
+	textAlign: "center",
+	width: Ti.UI.FILL,
+	height: "40dp"
+}
