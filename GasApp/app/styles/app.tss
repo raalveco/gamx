@@ -1,3 +1,81 @@
 "Label": {
 	color: "#000"
-}
+},
+"Window": {
+	backgroundColor: "#FFF"
+},
+
+"#ui_navtop": {
+	height: "70dp",
+	width: Ti.UI.FILL,
+	layout: "composite",
+	backgroundColor: "#DDD",
+	top: 0
+},
+"#ui_navtop_left": {
+	height: "70dp",
+	width: Ti.UI.SIZE,
+	layout: "horizontal",
+	left: 0
+},
+"#ui_navtop_right": {
+	height: "70dp",
+	width: Ti.UI.SIZE,
+	layout: "horizontal",
+	right: 0
+},
+"#ui_navbottom": {
+	height: "70dp",
+	width: Ti.UI.FILL,
+	layout: "horizontal",
+	backgroundColor: "#DDD",
+	bottom: 0
+},
+"#ui_wrap": {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	top: 0
+},
+".ui_wrap_top": {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	top: "70dp"
+},
+".ui_wrap_bottom": {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	bottom: "70dp"
+},
+
+
+".ui_icon": {
+	borderWidth: 0,
+	borderColor: "transparent",
+	backgroundColor: "transparent"
+},
+".ui_icon_back": {
+	image: "/icons/back.png"
+},
+".ui_icon_map": {
+	image: "/icons/map.png"
+},
+".ui_icon_gas": {
+	image: "/icons/gas.png"
+},
+".ui_icon_sort": {
+	image: "/icons/sort.png"
+},
+".ui_icon_reload": {
+	image: "/icons/reload.png"
+},
+
+
+
+
+
+
+
+
+
+
+

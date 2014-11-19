@@ -8,5 +8,17 @@ exports.definition = {
 			"idAttribute": "id",
 			"remoteBackup": false
 		}
+    },
+    extendCollection : function(Collection) {
+        _.extend(Collection.prototype, {
+            sql: function(query) {
+                return this.fetch({
+                    //query: { statement: query, params: params }
+                    query: query
+                });
+            }
+        });
+ 
+        return Collection;
     }
 };

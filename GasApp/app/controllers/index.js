@@ -4,4 +4,4 @@ $.index.open();
 
 Utils.Nav.createAllPages();
 Utils.Nav.goTo("home", {});
-Sync.start();
+//Sync.start();

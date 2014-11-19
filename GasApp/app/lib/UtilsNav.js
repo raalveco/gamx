@@ -7,7 +7,7 @@ Globals.set("window", "allPages", {});
 
 // Load all pages into memory to avoid memory leaks
 Nav.createAllPages = function(){	
-    var pages = ["home"];
+    var pages = ["home","list"];
     for (var i=0; i < pages.length; i++) {
         var page = pages[i];
         Ti.API.info("GASAPP: Pre-opening page: " + page + ".");
@@ -33,7 +33,7 @@ Nav.goTo = Nav.goto = function(page, parameters, forceModal) {
     params.fullscreen = false;
     params.navBarHidden = true;
     params.modal = true;
-    params.windowSoftInputMode = Ti.UI.Android.SOFT_INPUT_ADJUST_RESIZE | Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN;
+    //params.windowSoftInputMode = Ti.UI.Android.SOFT_INPUT_ADJUST_RESIZE | Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN;
     cpage.getView().modal = false;
     cpage.getView().open(params);
     Utils.Log.trace("Setting CurrentWindow to: " + Globals.get("window", "currentWindow").titleid);

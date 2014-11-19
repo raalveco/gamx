@@ -55,23 +55,30 @@ DB.deleteComment = function(commentId){
 	comments.remove(comment);
 };
 
-DB.getStationsByCityOrZip = function(value){
+var executeQuery = function(db, query, params){
+	var dbo = Ti.Database.open("/" + db + ".db");
+	var values = [query];
+	if(params){
+		for (var i=0; i < params.length; i++) {
+			values.push(params[i]);
+		};
+	}
+	Utils.Log.info("DB Query: " + values.join(", "));
+	var results = dbo.execute.apply(dbo, values);
+	dbo.close();
+	return results;
+};
+
+DB.getStationsByCityOrZip = function(value, page){
+	if(!page) page = 1;
 	var stations = DB.getAlloyCollection("stations");
-	var where = "";
-	// zip
-	where += "postcode=? OR ";
-	// municipality
-	where += "municipality = ? OR ";
-	where += "municipality like ? OR ";
-	where += "municipality like ? OR ";
-	where += "municipality like ?";
-	
-	var query = "SELECT * from stations WHERE " + where + " ORDER BY price1";
-	Utils.Log.info("Query: " + query);
-	stations.fetch({query: { statement: query, params: [value, value, "% " + value + " %", value + " %", "% " + value] }});
+	var where = "postcode=? OR municipality like ?";
+	var table = stations.config.adapter.collection_name;
+	var query = "SELECT * from " + table + " WHERE " + where + " ORDER BY prices1 limit " + ((page - 1) * 20 + 1) + ",20";
+	stations.fetch({query: { statement: query, params: [value, "%" + value + "%"] }});
 	var result = [];
 	stations.each(function(c) {
-		result.push(new Stations(
+		result.push(new Station(
 			c.get("id"),
 			c.get("name"),
 			c.get("description"),

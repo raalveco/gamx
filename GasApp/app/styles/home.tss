@@ -15,8 +15,15 @@
 	top: "10dp",
 	left: "10dp",
 	bottom: "10dp",
-	right: "10dp"
+	width: "60%"
 },
+"#header_search_button": {
+	top: "10dp",
+	bottom: "10dp",
+	right: "10dp", 
+	width: "20%"
+},
+
 "#container": {
 	top: "0",
 	bottom: "0",

@@ -1,0 +1,24 @@
+<Alloy>
+	<Window modal="true" titleid="list_title" id="index">
+		<View id="ui_wrap">
+			<ScrollView class="ui_wrap_top ui_wrap_bottom">
+				<View id="results" layout="vertical">
+					
+				</View>
+			</ScrollView>
+		</View>
+		<View id="ui_navtop">
+			<View id="ui_navtop_left">
+				<Button id="back" titleid="list_back" class="ui_icon ui_icon_back"></Button>
+			</View>
+			<View id="ui_navtop_right">
+				<Button id="map" class="ui_icon ui_icon_map"></Button>
+			</View>
+		</View>
+		<View id="ui_navbottom">
+			<Button id="filter_gas" titleid="list_regular" class="ui_icon ui_icon_gas"></Button>
+			<Button id="filter_sort" titleid="list_byprice" class="ui_icon ui_icon_sort"></Button>
+			<Button id="filter_reload" titleid="list_reload" class="ui_icon ui_icon_reload"></Button>
+		</View>
+	</Window>
+</Alloy>

@@ -1,38 +1,37 @@
 <Alloy>
-	<Window modal="true" titleid="home_title" id="index">
-		<View backgroundColor="#FFF">
-			<View id="header">
-				<View height="70%">
-					<ImageView id="header_image"></ImageView>
-				</View>
-				<View height="30%" backgroundColor="#123456">
-					<TextField id="header_search" />
-				</View>
+	<Window exitOnClose="true" modal="true" titleid="home_title" id="index">
+		<View id="container">
+			<View id="container_inner">
+				<ImageView id="container_image"></ImageView>
+				<Label id="container_text"></Label>
 			</View>
-			<View id="container">
-				<View id="container_inner">
-					<ImageView id="container_image"></ImageView>
-					<Label id="container_text"></Label>
-				</View>
+		</View>
+		<View id="header">
+			<View height="70%">
+				<ImageView id="header_image"></ImageView>
 			</View>
-			<View id="footer">
-				<View id="footer_inner">
-					<View class="footer_item">
-						<ImageView class="footer_item_image" image="/profile.png"></ImageView>
-						<Label textid="index_profile" class="footer_item_text"></Label>
-					</View>
-					<View class="footer_item">
-						<ImageView class="footer_item_image" image="/wingas.png"></ImageView>
-						<Label textid="index_wingas" class="footer_item_text"></Label>
-					</View>
-					<View class="footer_item">
-						<ImageView class="footer_item_image" image="/share.png"></ImageView>
-						<Label textid="index_share" class="footer_item_text"></Label>
-					</View>
-					<View class="footer_item">
-						<ImageView class="footer_item_image" image="/settings.png"></ImageView>
-						<Label textid="index_settings" class="footer_item_text"></Label>
-					</View>
+			<View height="30%" backgroundColor="#123456" layout="composite">
+				<TextField id="header_search" />
+				<Button id="header_search_button" titleid="home_search_button"></Button>
+			</View>
+		</View>
+		<View id="footer">
+			<View id="footer_inner">
+				<View class="footer_item">
+					<ImageView class="footer_item_image" image="/profile.png"></ImageView>
+					<Label textid="index_profile" class="footer_item_text"></Label>
+				</View>
+				<View class="footer_item">
+					<ImageView class="footer_item_image" image="/wingas.png"></ImageView>
+					<Label textid="index_wingas" class="footer_item_text"></Label>
+				</View>
+				<View class="footer_item">
+					<ImageView class="footer_item_image" image="/share.png"></ImageView>
+					<Label textid="index_share" class="footer_item_text"></Label>
+				</View>
+				<View class="footer_item">
+					<ImageView class="footer_item_image" image="/settings.png"></ImageView>
+					<Label textid="index_settings" class="footer_item_text"></Label>
 				</View>
 			</View>
 		</View>
